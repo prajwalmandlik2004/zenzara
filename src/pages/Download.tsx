@@ -3,13 +3,18 @@ import { DevicePhoneMobileIcon, ArrowDownTrayIcon } from '@heroicons/react/24/ou
 
 export default function Download() {
   const handleDownload = () => {
-    // Replace this URL with your actual app download link
-    window.location.href = 'https://play.google.com/store/apps/details?id=com.zenzara.app';
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/src/assets/zenzara.apk';
+    link.download = 'zenzara.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
     <div className="bg-white">
-      <section className="section-padding">
+      <section className="section-padding mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}

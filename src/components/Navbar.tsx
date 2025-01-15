@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Community', href: '/community' },
-  { name: 'Download App', href: '/download' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Community", href: "/community" },
+  { name: "Download App", href: "/download" },
 ];
 
 export default function Navbar() {
@@ -16,11 +16,16 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="bg-white shadow-sm fixed w-full top-0 z-50">
+    <header className="bg-primary-600 shadow-sm fixed w-full top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-primary-600">Zenzara</span>
+            {/* <span className="text-2xl font-bold text-primary-600">Zenzara</span> */}
+            <img
+              src="/src/assets/logo.png"
+              alt="Zenzara Logo"
+              className="h-20 w-auto"
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -40,8 +45,8 @@ export default function Navbar() {
               to={item.href}
               className={`text-sm font-semibold leading-6 transition-colors duration-200 ${
                 location.pathname === item.href
-                  ? 'text-primary-600'
-                  : 'text-gray-900 hover:text-primary-600'
+                  ? "text-black"
+                  : "text-gray-900 hover:text-black"
               }`}
             >
               {item.name}
@@ -51,18 +56,28 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             to="/login"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary-600"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-black"
           >
             Log in <span aria-hidden="true">→</span>
           </Link>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-              <span className="text-2xl font-bold text-primary-600">Zenzara</span>
+            <Link to="/" className="-m-1.5 p-1.5">
+              {/* <span className="text-2xl font-bold text-primary-600">Zenzara</span> */}
+              <img
+                src="/src/assets/logo.png"
+                alt="Zenzara Logo"
+                className="h-20 w-auto"
+              />
             </Link>
             <button
               type="button"
@@ -82,8 +97,8 @@ export default function Navbar() {
                     to={item.href}
                     className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
                       location.pathname === item.href
-                        ? 'text-primary-600 bg-gray-50'
-                        : 'text-gray-900 hover:bg-gray-50'
+                        ? "text-primary-600 bg-gray-50"
+                        : "text-gray-900 hover:bg-gray-50"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
