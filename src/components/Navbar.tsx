@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to="/" className="-m-1.5 p-1.5">
             {/* <span className="text-2xl font-bold text-primary-600">Zenzara</span> */}
             <img
-              src="/src/assets/logo.png"
+              src="https://i.im.ge/2025/01/15/zBHjGL.logo.png"
               alt="Zenzara Logo"
               className="h-20 w-auto"
             />
