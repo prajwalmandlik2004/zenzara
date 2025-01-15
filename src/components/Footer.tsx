@@ -21,9 +21,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@zenzara.com</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Address: 123 Wellness St, CA 94105</li>
+              <li>Email: aayushprat7@gmail.com</li>
+              <li>Phone: +91 8767986576</li>
+              <li>Address: Pune, Maharashtra</li>
             </ul>
           </div>
           <div>
