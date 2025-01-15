@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="bg-white">
       {/* Vision Section */}
-      <section className="section-padding">
+      <section className="section-padding mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
