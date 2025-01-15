@@ -16,17 +16,18 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="bg-primary-600 shadow-sm fixed w-full top-0 z-50">
+    <header className="bg-primary-600 shadow-sm fixed w-full top-0 z-40">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5">
-            {/* <span className="text-2xl font-bold text-primary-600">Zenzara</span> */}
-            <img
-              src="https://i.im.ge/2025/01/15/zBHjGL.logo.png"
-              alt="Zenzara Logo"
-              className="h-20 w-auto"
-            />
-          </Link>
+        <div className="flex sm:flex-1">
+          <div className="p-0 h-20 mb-10">
+            <Link to="/" className="-m-1.5 p-1.5 flex items-center">
+              <img
+                src="https://i.im.ge/2025/01/15/zBHjGL.logo.png"
+                alt="Zenzara Logo"
+                className="h-25 w-auto object-contain"
+              />
+            </Link>
+          </div>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -69,16 +70,17 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-primary-600 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
-              {/* <span className="text-2xl font-bold text-primary-600">Zenzara</span> */}
+          <div className="p-0 h-20 mb-10">
+            <Link to="/" className="-m-1.5 p-1.5 flex items-center">
               <img
-                src="/src/assets/logo.png"
+                src="https://i.im.ge/2025/01/15/zBHjGL.logo.png"
                 alt="Zenzara Logo"
-                className="h-20 w-auto"
+                className="h-25 w-auto object-contain"
               />
             </Link>
+          </div>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"

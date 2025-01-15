@@ -3,10 +3,14 @@ import { DevicePhoneMobileIcon, ArrowDownTrayIcon } from '@heroicons/react/24/ou
 
 export default function Download() {
   const handleDownload = () => {
+    // Using the correct public path for the APK file
+    const apkPath = '/zenzara.apk';
+    
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/src/assets/zenzara.apk';
-    link.download = 'zenzara.apk';
+    link.href = apkPath;
+    link.setAttribute('download', 'zenzara.apk');
+    link.setAttribute('type', 'application/vnd.android.package-archive');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
